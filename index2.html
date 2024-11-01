@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate BD</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+  </head>
+  <body>
+    <header class="items-center">
+      <!-- Navbar section -->
+      <section class="flex justify-center items-center h-24 bg-zinc-100">
+        <div
+          class="navbar w-[95%] sm:w-[90%] border-0 p-0 flex justify-between"
+        >
+          <button
+            id="home-btn" class="btn h-5 w-16 sm:w-[100px] bg-lime-400 font-bold text-base"
+          >
+            Home
+          </button>
+          <div class="navbar-center flex gap-2 sm:gap-4 items-center">
+            <img src="assets/logo.png" alt="" class="h-7 sm:h-12" />
+            <h2 class="font-bold text-base sm:text-xl">Donate Bangladesh</h2>
+          </div>
+          <div class="flex gap-1 sm:gap-2 items-center">
+            <img src="assets/coin.png" alt="" class="h-4 sm:h-6" />
+            <p class="font-semibold text-gray-500 text-xs sm:text-base">
+              <span>5500</span> BDT
+            </p>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="flex justify-center items-center my-5">
+      <div class="w-[95%] sm:w-[90%]">
+        <h1 class="text-3xl sm:text-5xl font-bold pb-5">Important FAQ</h1>
+        <div class="grid gap-2">
+          <!-- first collapse section -->
+          <div
+            tabindex="0"
+            class="collapse collapse-arrow border-base-300 bg-base-300 border"
+          >
+            <div class="collapse-title text-base sm:text-xl font-medium">
+              What is the Document Object Model (DOM)?
+            </div>
+            <div class="collapse-content text-base bg-slate-100 rounded-xl sm:text-lg">
+              <p>
+                The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.
+              </p>
+            </div>
+          </div>
+          <!-- second collapse section -->
+          <div
+            tabindex="0"
+            class="collapse collapse-arrow border-base-300 bg-base-300 border"
+          >
+            <div class="collapse-title text-base sm:text-xl font-medium">
+                How do you select an element from the DOM?
+            </div>
+            <div class="collapse-content text-base sm:text-lg bg-slate-100 rounded-xl">
+              <p>
+                Tag-name, Id amd classes used to select an element from DOM. e.g. document.getElementByTagName("..."). 
+              </p>
+            </div>
+          </div>
+          <!-- third collapse section -->
+          <div
+            tabindex="0"
+            class="collapse collapse-arrow border-base-300 bg-base-300 border"
+          >
+            <div class="collapse-title text-base sm:text-xl font-medium">
+                What is event delegation in the context of the DOM, and why is it useful?
+            </div>
+            <div class="collapse-content text-base sm:text-lg bg-slate-100 rounded-xl">
+              <p>
+                Event delegation is based event-bubbling method. It is an event-handling pattern that allows you to handle events at a higher level in the DOM tree other than the level where the event was first received.
+              </p>
+            </div>
+          </div>
+          <!-- fourth collapse section -->
+          <div
+            tabindex="0"
+            class="collapse collapse-arrow border-base-300 bg-base-300 border"
+          >
+            <div class="collapse-title text-base sm:text-xl font-medium">
+                How do you manipulate an element's attributes and styles using the DOM?
+            </div>
+            <div class="collapse-content text-base sm:text-lg bg-slate-100 rounded-xl">
+              <p>
+                The classList object only provide methods to change the class of an element. If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/switch-file.js"></script>
+  </body>
+</html>
