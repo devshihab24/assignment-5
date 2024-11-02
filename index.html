@@ -22,12 +22,19 @@
     *{
         font-family: "Lexend", sans-serif;
     }
-</style>
+  </style>
+  <style>
+    .header{
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+  </style>
 </head>
-<body class="m-0 p-0 overflow-x-hidden">
-  <header class=" items-center">
+<body class="m-0 p-0">
+  <header id="main-header" class="header block items-center">
     <!-- Navbar section -->
-    <section class="flex justify-center items-center h-24 bg-zinc-100">
+    <section class="flex justify-center items-center h-24">
       <div class="navbar w-[95%] sm:w-[90%] border-0 p-0 flex justify-between">
         <button id="blog-btn" class="btn h-5 w-16 sm:w-[100px] bg-lime-400 font-bold text-base">Blog</button>
         <div class="navbar-center flex gap-2 sm:gap-4 items-center">
@@ -42,9 +49,9 @@
     </section>
 
     <!-- Navbar buttons section -->
-    <section class="flex justify-center gap-5 sm:gap-10 mt-5">
+    <section class="flex header justify-center gap-5 sm:gap-10 pb-2 mt-0 sm:mt-5">
       <button id="donation-btn" class="btn w-[80px] sm:w-[100px] bg-lime-400 font-bold text-sm sm:text-base">Donation</button>
-      <button id="donation-history-btn" class="btn w-[80px] sm:w-[100px] bg-lime-400 font-bold text-sm sm:text-base">History</button>
+      <button id="donation-history-btn" class="btn w-[80px] sm:w-[100px] font-bold text-sm sm:text-base">History</button>
     </section>
   </header>
 
@@ -67,7 +74,22 @@
             </p>
             <div class="flex flex-col gap-2">
               <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full border border-zinc-200" />
-              <button class="btn btn-wide bg-lime-400 font-bold w-full text-sm sm:text-base">Donate Now</button>
+              <button class="btn bg-lime-400 font-bold w-full text-sm sm:text-base" onclick="my_modal_1.showModal()">Donate Now</button>
+              <dialog id="my_modal_1" class="modal">
+                <div class="modal-box text-center">
+                  <h3 class="text-lg sm:text-2xl text-center font-bold">Congratulations!
+                    <img src="assets/logo.png" alt="" class=" px-[45%] h-7 sm:h-12">
+                  </h3>
+                  
+                  <p class="py-4 text-base sm:text-lg font-semibold">You have donated successfully for humankind😊</p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </div>
           </div>
         </div>
@@ -87,7 +109,22 @@
             </p>
             <div class="flex flex-col gap-2">
               <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full border border-zinc-200" />
-              <button class="btn btn-wide bg-lime-400 font-bold w-full text-sm sm:text-base">Donate Now</button>
+              <button class="btn bg-lime-400 font-bold w-full text-sm sm:text-base" onclick="my_modal_1.showModal()">Donate Now</button>
+              <dialog id="my_modal_2" class="modal">
+                <div class="modal-box text-center">
+                  <h3 class="text-lg sm:text-2xl text-center font-bold">Congratulations!
+                    <img src="assets/logo.png" alt="" class=" px-[45%] h-7 sm:h-12">
+                  </h3>
+                  
+                  <p class="py-4 text-base sm:text-lg font-semibold">You have donated successfully for humankind😊</p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </div>
           </div>
         </div>
@@ -107,7 +144,22 @@
             </p>
             <div class="flex flex-col gap-2">
               <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full border border-zinc-200" />
-              <button class="btn btn-wide bg-lime-400 font-bold w-full text-sm sm:text-base">Donate Now</button>
+              <button class="btn bg-lime-400 font-bold w-full text-sm sm:text-base" onclick="my_modal_1.showModal()">Donate Now</button>
+              <dialog id="my_modal_3" class="modal">
+                <div class="modal-box text-center">
+                  <h3 class="text-lg sm:text-2xl text-center font-bold">Congratulations!
+                    <img src="assets/logo.png" alt="" class=" px-[45%] h-7 sm:h-12">
+                  </h3>
+                  
+                  <p class="py-4 text-base sm:text-lg font-semibold">You have donated successfully for humankind😊</p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </div>
           </div>
         </div>
@@ -121,6 +173,7 @@
       </div>
      </section>
   </main>
+  <script src="js/utilities.js"></script>
   <script src="js/home.js"></script>
 </body>
 </html>
