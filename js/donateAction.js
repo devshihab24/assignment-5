@@ -16,6 +16,11 @@ document
       document.getElementById("first-donate-input").value = "";
       return;
     }
+    if (firstInputValue <= 0) {
+      alert("Please donate us🥺!");
+      document.getElementById("first-donate-input").value = "";
+      return;
+    }
     const firstDonateNewBalance = firstInputValue + firstDonateBalance;
     const newBalance = balance - firstInputValue;
     document.getElementById("balance").innerText = newBalance;
@@ -53,6 +58,11 @@ document
       document.getElementById("second-donate-input").value = "";
       return;
     }
+    if (secondInputValue <= 0) {
+      alert("Please donate us🥺!");
+      document.getElementById("first-donate-input").value = "";
+      return;
+    }
     const secondDonateNewBalance = secondInputValue + secondDonateBalance;
     const newBalance = balance - secondInputValue;
     document.getElementById("balance").innerText = newBalance;
@@ -88,6 +98,11 @@ document
     if (thirdInputValue > balance) {
       alert("Insufficient Balance!");
       document.getElementById("third-donate-input").value = "";
+      return;
+    }
+    if (thirdInputValue <= 0) {
+      alert("Please donate us🥺!");
+      document.getElementById("first-donate-input").value = "";
       return;
     }
     const thirdDonateNewBalance = thirdInputValue + thirdDonateBalance;
